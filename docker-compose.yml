@@ -1,8 +1,6 @@
 services:
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ${TAG}
     container_name: "${PROJECT_NAME}-backend"
     ports:
       - 8080:8000
@@ -31,3 +29,4 @@ services:
 
 volumes:
   pg_data:
+
